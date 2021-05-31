@@ -1,0 +1,438 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-size: 100%;
+    background-attachment: fixed;
+    background-image: url("../img/fondo.png");
+}
+
+header {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.contenedor {
+    color: white;
+}
+
+.titulo h1 {
+    text-align: center;
+    color: #E67E22;
+    font-family: 'Bangers', cursive;
+    text-shadow: 2px 2px 4px rgb(116, 113, 113);
+    font-size: 80px;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin: 0%;
+}
+
+#menu ul li a {
+    color: #ccc;
+    font-size: 20px;
+    transition: all 600ms;
+}
+
+#menu ul li a:hover {
+    transform: translateY(-10px);
+    transform: translateX(15px);
+    background-color: black;
+    box-shadow: 0px 0px 5px white;
+}
+
+.sect {
+    width: 90%;
+    margin: 30px 5%;
+    box-shadow: 0px 0px 10px black;
+    float: left;
+}
+
+.cont {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 2em;
+    width: 40%;
+    margin: 5%;
+    color: white;
+    text-align: center;
+    float: left;
+}
+
+.referencia {
+    width: 50%;
+    height: 400px;
+    float: left;
+}
+
+.referencia img {
+    width: 100%;
+    height: 100%;
+}
+
+.capacitaciones {
+    text-align: center;
+    width: 90%;
+    margin: 30px 5%;
+    float: left;
+}
+
+.capacitaciones figure {
+    position: relative;
+    float: left;
+    width: 25%;
+    height: 250px;
+    margin: 20px 4%;
+    border: solid 3px white;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px black;
+    cursor: pointer;
+}
+
+.capacitaciones figure img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    transition: all 500ms ease-out;
+}
+
+.capacitaciones figure .mensaje {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(144, 148, 151, 0.7);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.capacitaciones figure:hover>.mensaje {
+    opacity: 1;
+    visibility: visible;
+}
+
+.capacitaciones figure:hover>.mensaje h3 {
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+
+.capacitaciones figure .mensaje h3 {
+    color: black;
+    font-weight: bold;
+    transition: all 500ms ease-out;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.capacitaciones figure .mensaje p {
+    color: black;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+}
+
+.asesorias {
+    width: 90%;
+    margin: 30px 5%;
+    float: left;
+}
+
+.asesorias h1 {
+    text-align: center;
+}
+
+.carta {
+    width: 25%;
+    margin: 20px 4%;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    transition: all 250ms;
+    float: left;
+}
+
+.asesorias .carta:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.5);
+}
+
+.asesorias .carta img {
+    width: 100%;
+    height: 220px;
+}
+
+.asesorias .carta li {
+    font-weight: bold;
+    font-size: 17px;
+    color: rgb(52, 152, 219);
+}
+
+.contac {
+    width: 100%;
+    margin: 30px 0px;
+    float: left;
+}
+
+.contac h1 {
+    text-align: center;
+}
+
+.contac form {
+    color: white;
+    padding: 20px;
+    margin: 35px;
+    font-size: 20px;
+    font-weight: 600;
+    border: solid 4px white;
+    border-radius: 6px;
+    background-image: url("../img/fondo-com.jpg");
+}
+
+form .boton {
+    padding-top: 40px;
+    text-align: center;
+}
+
+form .boton input {
+    padding: 0 5px;
+    border-radius: 4px;
+    background: white;
+    color: black;
+}
+
+.contac input {
+    margin-bottom: 20px;
+}
+
+.contac .errores {
+    border: 2px solid red;
+    border-radius: 6px;
+    background-color: rgba(255, 0, 0, 0.5);
+    transition: all 2s;
+    display: none;
+}
+
+.boton .est {
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(64, 64, 197);
+}
+
+#arriba {
+    border-radius: 50%;
+    background-color: rgba(230, 126, 34, 0.6);
+    position: fixed;
+    right: -100px;
+    bottom: 50px;
+    width: 52px;
+    height: 52px;
+    transition: all 1s;
+}
+
+.recetas-random {
+    width: 90%;
+    margin: 30px 5%;
+    float: left;
+}
+
+.recetas-random h1 {
+    text-align: center;
+}
+
+.receta {
+    width: 40%;
+    height: 500px;
+    overflow-y: scroll;
+    margin: 30px 5%;
+    padding: 10px;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+}
+
+#img {
+    width: 40%;
+    margin: 30px 5%;
+    float: left;
+    border: solid 3px white;
+    border-radius: 6px;
+}
+
+#img img {
+    width: 100%;
+    height: 500px;
+    border-radius: 6px;
+}
+
+.style h3 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#pie {
+    width: 100%;
+    margin-top: 200px;
+    float: left;
+    color: white;
+    background-color: rgba(236, 240, 241, 0.3);
+}
+
+#pie .menu-pie {
+    width: 25%;
+    margin: 20px 4%;
+    float: left;
+}
+
+#pie .menu-pie h2 {
+    text-align: center;
+    border-bottom: 2px solid white;
+}
+
+#pie .menu-pie ul {
+    list-style: none;
+}
+
+#pie .menu-pie ul li {
+    padding: 5px 0px;
+}
+
+#pie .menu-pie ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#pie .menu-pie ul li a:hover {
+    color: #E67E22;
+}
+
+#pie .titulo-pie {
+    width: 25%;
+    margin: 0% 4%;
+    padding-top: 20px;
+    float: left;
+}
+
+#pie .titulo-pie h2 {
+    color: #E67E22;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Bangers', cursive;
+    text-shadow: 2px 2px 4px black;
+    text-transform: uppercase;
+}
+
+#pie .titulo-pie h4 {
+    text-align: center;
+    font-size: 20px;
+}
+
+#pie .redes {
+    width: 25%;
+    margin: 20px 4%;
+    float: left;
+}
+
+#pie .redes h2 {
+    text-align: center;
+    border-bottom: 2px solid white;
+}
+
+#pie .redes img {
+    margin-left: 45px;
+    margin-top: 20px;
+    width: 60px;
+    height: 60px;
+}
+
+#pie p {
+    clear: left;
+    width: 100%;
+    text-align: center;
+    border-top: 2px solid white;
+}
+
+@media (max-width: 1225px) {
+    body {
+        background-size: cover;
+    }
+}
+
+@media (max-width: 1201px) {
+    .cont {
+        width: auto;
+    }
+    .referencia {
+        width: auto;
+        padding: 0px 60px;
+    }
+}
+
+@media (max-width: 992px) {
+    nav ul li {
+        border-right: none;
+        border-bottom: 1px solid white;
+    }
+    #menu ul li a:hover {
+        color: #F4D03F;
+    }
+}
+
+@media (max-width: 600px) {
+    .referencia {
+        display: none;
+    }
+}
+
+@media (max-width: 1100px) {
+    .capacitaciones figure {
+        width: 40%;
+        margin: 20px 5%;
+    }
+}
+
+@media (max-width: 660px) {
+    .capacitaciones figure {
+        width: 70%;
+        margin: 20px 15%;
+    }
+}
+
+@media (max-width: 900PX) {
+    .carta {
+        width: 50%;
+        margin: 20px 25%;
+    }
+}
+
+@media (max-width: 550PX) {
+    .carta {
+        width: 70%;
+        margin: 20px 15%;
+    }
+}
+
+@media (max-width: 500px) {
+    .contac .row .col {
+        width: 70%;
+        padding: 8px 15%;
+    }
+    #pie .menu-pie {
+        width: 70%;
+        margin: 20px 15%;
+    }
+    #pie .titulo-pie {
+        display: none;
+    }
+    #pie .redes {
+        width: 70%;
+        margin: 20px 15%;
+    }
+}
