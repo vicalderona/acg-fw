@@ -1,0 +1,52 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{% static 'servicios/css/cli_ser.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesorias y Capacitaciones</title>
+</head>
+
+<body>
+    <div class="tabla">
+        <h1>Lista Tipo Servicios</h1>
+
+        <table border="2px">
+            <tr>
+                <th>Id Tipo Servicio</th>
+                <th>Nombre Tipo Servicio</th>
+                <th>Imagen</th>
+                <th scope="col">Modificar</th>
+                <th scope="col">Eliminar</th>
+
+            </tr>
+            {% for tser in tipoSer %}
+            <tr>
+                <td>{{tser.idTipo}}</td>
+                <td>{{tser.nombreTipo}}</td>
+                <td><img src="{{ tser.imgTipo.url}}" class="ref" alt=""></td>
+                <td>
+                    <a href="{% url 'modificar_tipo_servicio' tser.idTipo %}"><img src="{% static 'servicios/img/boton-editar1.png' %}" alt=""></a>
+                </td>
+                <td>
+                    <a href="{% url 'eliminar_tipo_servicio' tser.idTipo %}" id="eliminar"><img src="{% static 'servicios/img/eliminar1.png' %}" alt=""></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <div class="enlace_agre">
+            <a href="{% url 'agregar_tipo_servicio' %}">Agregar Tipo Servicio</a>
+            <a href="{% url 'vista_cliente' %}">Volver</a>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

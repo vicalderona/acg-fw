@@ -1,0 +1,17 @@
+#formulario {
+    padding: 30px;
+}
+
+.boton {
+    padding-top: 20px;
+}
+
+.enlace a {
+    color: black;
+    padding: 30px;
+}
+
+.enlace a:hover {
+    text-decoration: none;
+    color: black;
+}

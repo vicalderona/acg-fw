@@ -1,0 +1,30 @@
+* {
+    background-image: url("../img/fondo_admin_2.png");
+    background-size: 100%;
+    background-attachment: fixed;
+    font-family: 'Bangers', cursive;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    padding: 40px;
+    border-bottom: 2px solid white;
+}
+
+.elec {
+    width: 100%;
+    margin: 50px 25px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.elec a {
+    color: white;
+    font-weight: bold;
+}
+
+.elec a:hover {
+    color: white;
+    text-decoration: none;
+}
