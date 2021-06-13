@@ -1,0 +1,102 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="{% static 'servicios/css/capas.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Asesorias y Capacitaciones</title>
+</head>
+
+<body>
+    <header>
+        <div class="titulo" id="principio">
+            <h1>ACG</h1>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark ">
+            <button class="navbar-toggler" data-target="#menu" data-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse center" id="menu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a href="{% url 'home' %}}" class="nav-link">Inicio</a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="titu-capa">
+        <h1>Capacitaciones</h1>
+    </div>
+
+    <div class="contenedor">
+        {% for cap in servicio %}
+        <div class="carta">
+
+            <img src="{{cap.imgServicio.url}}" alt="">
+            <h2>{{cap.nombreServicio}}</h2>
+            <p>{{cap.descrpcion}}</p>
+
+        </div>
+        {% endfor %}
+    </div>
+
+
+    <footer id="pie">
+        <div class="menu-pie">
+            <h2>Menú</h2>
+            <ul>
+
+                <li>
+                    <a href="#inicio">Inicio</a>
+                </li>
+                <li>
+                    <a href="#acercade">Acerca de</a>
+                </li>
+                <li>
+                    <a href="#capas">Capacitaciones</a>
+                </li>
+                <li>
+                    <a href="#asesos">Asesorías</a>
+                </li>
+                <li>
+                    <a href="#contac">Contacto</a>
+                </li>
+            </ul>
+        </div>
+        <div class="titulo-pie">
+            <h2>ACG</h2>
+            <h4>Asesorías y Capacitaciones</h4>
+        </div>
+        <div class="redes">
+            <h2>Nuestras Redes</h2>
+            <a href="#"><img src="{% static 'servicios/img/facebook.png' %}" alt=""></a>
+            <a href="#"><img src="{% static 'servicios/img/instagram.png' %}" alt=""></a>
+            <a href="#"><img src="{% static 'servicios/img/whatsapp.png' %}" alt=""></a>
+        </div>
+        <p>Todos los derecos reservados &copy; Javier Freire & Vicente Calderon</p>
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

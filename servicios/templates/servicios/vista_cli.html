@@ -1,0 +1,52 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{% static 'servicios/css/cli_ser.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesorias y Capacitaciones</title>
+</head>
+
+<body>
+    <div class="tabla">
+        <h1>Lista Servicios</h1>
+        <table border="2px">
+            <tr>
+                <th>Id Servicio</th>
+                <th>Nombre Servicio</th>
+                <th>Descripción</th>
+                <th>Imagen</th>
+                <th>Tipo Servicio</th>
+                <th scope="col">Modificar</th>
+                <th scope="col">Eliminar</th>
+            </tr>
+            {% for ser in servicio %}
+            <tr>
+                <td>{{ser.idServicio}}</td>
+                <td>{{ser.nombreServicio}}</td>
+                <td>{{ser.descrpcion}}</td>
+                <td><img src="{{ ser.imgServicio.url}}" class="ref" alt=""></td>
+                <td>{{ser.TipoServicio}}</td>
+                <td>
+                    <a href="{% url 'form_modi_serv' ser.idServicio %}"><img src="{% static 'servicios/img/boton-editar1.png' %}" alt=""></a>
+                </td>
+                <td>
+                    <a href="{% url 'eliminar_servicio' ser.idServicio %}" id="eliminar"><img src="{% static 'servicios/img/eliminar1.png' %}" alt=""></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="enlace_agre">
+        <a href="{% url 'form_servicio' %}">Agregar Servicio</a>
+        <a href="{% url 'vista_cliente' %}">Volver</a>
+    </div>
+
+
+
+</body>
+
+</html>
