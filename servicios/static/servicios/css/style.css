@@ -6,21 +6,17 @@
 body {
     background-size: 100%;
     background-attachment: fixed;
-    background-image: url("../img/fondo.png");
+    background-image: url("../img/fondo_negro.png");
 }
 
 header {
     background-color: rgba(0, 0, 0, .5);
 }
 
-.contenedor {
-    color: white;
-}
-
 .titulo h1 {
     text-align: center;
-    color: #E67E22;
-    font-family: 'Bangers', cursive;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
     text-shadow: 2px 2px 4px rgb(116, 113, 113);
     font-size: 80px;
     text-transform: uppercase;
@@ -40,6 +36,23 @@ header {
     transform: translateX(15px);
     background-color: black;
     box-shadow: 0px 0px 5px white;
+}
+
+.ingreso {
+    width: 20%;
+    margin: 0px 40%;
+    text-align: center;
+}
+
+.ingreso .botoninicios {
+    text-decoration: none;
+    padding: 5px;
+    font-weight: 300;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #6b6967;
+    border-radius: 6px;
+    border: 2px solid #ffffff;
 }
 
 .sect {
@@ -70,82 +83,78 @@ header {
     height: 100%;
 }
 
-.capacitaciones {
+.titulo-cont {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contenido {
     text-align: center;
     width: 90%;
     margin: 30px 5%;
     float: left;
 }
 
-.capacitaciones figure {
+.contenido figure {
     position: relative;
     float: left;
-    width: 25%;
-    height: 250px;
-    margin: 20px 4%;
+    width: 30%;
+    height: 380px;
+    margin: 20px 10%;
     border: solid 3px white;
     border-radius: 6px;
     box-shadow: 0px 15px 25px black;
-    cursor: pointer;
 }
 
-.capacitaciones figure img {
+.contenido figure img {
     width: 100%;
     height: 100%;
     border-radius: 6px;
     transition: all 500ms ease-out;
 }
 
-.capacitaciones figure .mensaje {
+.contenido figure .mensaje {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
     background: rgba(144, 148, 151, 0.7);
-    transition: all 500ms ease-out;
+    transition: all 0ms ease-out;
     opacity: 0;
     visibility: hidden;
     text-align: center;
+    color: black;
+    font-family: 'Bangers', cursive;
 }
 
-.capacitaciones figure:hover>.mensaje {
+.contenido figure .mensaje a {
+    text-decoration: none;
+    color: black;
+}
+
+.contenido figure:hover>.mensaje {
     opacity: 1;
     visibility: visible;
 }
 
-.capacitaciones figure:hover>.mensaje h3 {
-    margin-top: 70px;
-    margin-bottom: 15px;
+.contenido figure:hover>.mensaje h1 {
+    line-height: 350px;
+    font-size: 50px;
 }
 
-.capacitaciones figure .mensaje h3 {
-    color: black;
-    font-weight: bold;
-    transition: all 500ms ease-out;
-    margin-top: 30px;
-    margin-bottom: 100px;
+.titu-aseso {
+    text-align: center;
+    color: white;
 }
 
-.capacitaciones figure .mensaje p {
-    color: black;
-    font-size: 15px;
-    line-height: 1.5;
-    width: 100%;
-    max-width: 220px;
-    margin: auto;
-}
-
-.asesorias {
+.contenedor {
     width: 90%;
     margin: 30px 5%;
     float: left;
 }
 
-.asesorias h1 {
-    text-align: center;
-}
-
-.carta {
+.contenedor .carta {
     width: 25%;
     margin: 20px 4%;
     border-radius: 8px;
@@ -157,20 +166,14 @@ header {
     float: left;
 }
 
-.asesorias .carta:hover {
+.contenedor .carta:hover {
     transform: translateY(-15px);
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.5);
 }
 
-.asesorias .carta img {
+.contenedor .carta img {
     width: 100%;
     height: 220px;
-}
-
-.asesorias .carta li {
-    font-weight: bold;
-    font-size: 17px;
-    color: rgb(52, 152, 219);
 }
 
 .contac {
@@ -181,6 +184,7 @@ header {
 
 .contac h1 {
     text-align: center;
+    color: white;
 }
 
 .contac form {
@@ -237,27 +241,6 @@ form .boton input {
     transition: all 1s;
 }
 
-.recetas-random {
-    width: 90%;
-    margin: 30px 5%;
-    float: left;
-}
-
-.recetas-random h1 {
-    text-align: center;
-}
-
-.receta {
-    width: 40%;
-    height: 500px;
-    overflow-y: scroll;
-    margin: 30px 5%;
-    padding: 10px;
-    float: left;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 6px;
-}
-
 #img {
     width: 40%;
     margin: 30px 5%;
@@ -275,6 +258,12 @@ form .boton input {
 .style h3 {
     font-size: 25px;
     font-weight: bold;
+}
+
+.tit_regis h2 {
+    text-align: center;
+    color: white;
+    margin: 15px;
 }
 
 #pie {

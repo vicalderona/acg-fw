@@ -1,0 +1,39 @@
+* {
+    background-image: url("../img/fondo_admin_2.png");
+    background-size: 100%;
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#formulario {
+    padding: 30px;
+    font-size: 18px;
+}
+
+.titulo {
+    margin: 30px;
+}
+
+label {
+    margin: 0px 10px;
+}
+
+input {
+    border: 1px solid white;
+}
+
+.boton {
+    padding-top: 20px;
+}
+
+.enlace a {
+    padding: 30px;
+    color: white;
+    font-size: 18px;
+}
+
+.enlace a:hover {
+    text-decoration: none;
+    color: white;
+}
