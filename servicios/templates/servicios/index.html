@@ -1,5 +1,4 @@
 {% load static%}
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -24,6 +23,7 @@
             <div class="titulo" id="principio">
                 <h1>ACG</h1>
             </div>
+
             <nav class="navbar navbar-expand-lg navbar-dark ">
                 <button class="navbar-toggler" data-target="#menu" data-toggle="collapse" type="button">
                     <span class="navbar-toggler-icon"></span>
@@ -45,10 +45,17 @@
                         <li class="nav-item active ">
                             <a href="{% url 'vista_cliente' %}" class="nav-link">Admin</a>
                         </li>
+
                     </ul>
                 </div>
             </nav>
+
         </header>
+        <div class="ingreso">
+            <a href="{% url 'login' %}">Iniciar Sesión</a>
+            <a href="{% url 'registro' %}">Resgistrarse</a> {% if user.is_aythenticated %}
+            <a href="{% url 'logout' %}">Cerrar Sesión</a> {% endif %}
+        </div>
         <section class="contenedor">
             <a name="inicio"></a>
             <div class="sect">

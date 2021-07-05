@@ -29,17 +29,22 @@
                 <td>{{tser.nombreTipo}}</td>
                 <td><img src="{{ tser.imgTipo.url}}" class="ref" alt=""></td>
                 <td>
+                    {% if perms.gastronomia.change_TipoServicio %}
                     <a href="{% url 'modificar_tipo_servicio' tser.idTipo %}"><img src="{% static 'servicios/img/boton-editar1.png' %}" alt=""></a>
+                    {% endif %}
                 </td>
                 <td>
+                    {% if perms.gastronomia.delete_TipoServicio %}
                     <a href="{% url 'eliminar_tipo_servicio' tser.idTipo %}" id="eliminar"><img src="{% static 'servicios/img/eliminar1.png' %}" alt=""></a>
+                    {% endif %}
                 </td>
             </tr>
             {% endfor %}
         </table>
 
         <div class="enlace_agre">
-            <a href="{% url 'agregar_tipo_servicio' %}">Agregar Tipo Servicio</a>
+            {% if perms.gastronomia.add_TipoServicio %}
+            <a href="{% url 'agregar_tipo_servicio' %}">Agregar Tipo Servicio</a>{% endif %}
             <a href="{% url 'vista_cliente' %}">Volver</a>
         </div>
     </div>

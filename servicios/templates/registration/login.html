@@ -1,13 +1,13 @@
-{% load static%}
+{% load static%} {% load socialaccount %} {% providers_media_js %} {% load i18n %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'servicios/css/login-regis.css' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="{% static 'servicios/css/form_agre.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -17,23 +17,22 @@
 </head>
 
 <body>
-    <div class="titulo">
-        <h1>Modificar Tipo Servicio</h1>
+    <div class="tit_pag">
+        <h1>ACG</h1>
     </div>
-    <form method="POST" enctype="multipart/form-data" action="" id="formulario">
-        {% csrf_token %}
-
-        <div class="form_group">
-            {{form.as_table }}
+    <section class="regis">
+        <div class="tit_regis">
+            <h2>Iniciar Sesión</h2>
         </div>
-        <div class="boton">
-            <input type="submit" class="btn btn-danger" id="enviar" value="Modificar">
-            <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+        <div class="form_regis">
+            <form method="POST">
+                {% csrf_token %} {{form}}
+                <a class="enlace" href="{% url 'home' %}">Ir al inicio</a>
+                <input class="boton" type="submit" value="Iniciar Sesión">
+                <a href="{% provider_login_url 'google' %}"><img class="google" src="{% static 'servicios/img/google.png' %}" alt=""></a>
+            </form>
         </div>
-    </form>
-    <div class="enlace">
-        <a href="{% url 'vista_admin_TS' %}">Volver</a>
-    </div>
+    </section>
 </body>
 
 </html>
