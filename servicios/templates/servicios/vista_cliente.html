@@ -18,10 +18,16 @@
     <section>
         <h1>ACG Administrador</h1>
         <div class="elec">
-            <a href="{% url 'vista_admin_TS' %}">Tipo Servicios</a>
+            <a href="{% url 'vista_admin_TS' %}">Tipo Servicios</a><br>
+            <a href="{% url 'lista_tiposervicio' %}">API</a>
         </div>
         <div class="elec ">
-            <a href="{%url 'vista_admin_ser' %}">Servicios</a>
+            <a href="{%url 'vista_admin_ser' %}">Servicios</a><br>
+            <a href="{% url 'lista_servicio' %}">API</a>
+        </div>
+
+        <div class="elec">
+            <a href="{% url 'home' %}">Volver a Página Principal</a>
         </div>
     </section>
 </body>

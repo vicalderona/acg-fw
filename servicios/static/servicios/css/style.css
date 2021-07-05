@@ -6,7 +6,7 @@
 body {
     background-size: 100%;
     background-attachment: fixed;
-    background-image: url("../img/fondo.png");
+    background-image: url("../img/fondo_negro.png");
 }
 
 header {
@@ -36,6 +36,17 @@ header {
     transform: translateX(15px);
     background-color: black;
     box-shadow: 0px 0px 5px white;
+}
+
+.ingreso {
+    width: 20%;
+    margin: 0px 40%;
+}
+
+.ingreso a {
+    text-decoration: none;
+    color: white;
+    background-color: #E67E22;
 }
 
 .sect {
@@ -159,47 +170,6 @@ header {
     height: 220px;
 }
 
-
-/*
-.asesorias {
-    width: 90%;
-    margin: 30px 5%;
-    float: left;
-}
-
-.asesorias h1 {
-    text-align: center;
-}
-
-.carta {
-    width: 25%;
-    margin: 20px 4%;
-    border-radius: 8px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    cursor: pointer;
-    text-align: center;
-    transition: all 250ms;
-    float: left;
-}
-
-.asesorias .carta:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.5);
-}
-
-.asesorias .carta img {
-    width: 100%;
-    height: 220px;
-}
-
-.asesorias .carta li {
-    font-weight: bold;
-    font-size: 17px;
-    color: rgb(52, 152, 219);
-}
-*/
-
 .contac {
     width: 100%;
     margin: 30px 0px;
@@ -282,6 +252,12 @@ form .boton input {
 .style h3 {
     font-size: 25px;
     font-weight: bold;
+}
+
+.tit_regis h2 {
+    text-align: center;
+    color: white;
+    margin: 15px;
 }
 
 #pie {

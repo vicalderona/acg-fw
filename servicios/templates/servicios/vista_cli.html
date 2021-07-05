@@ -30,18 +30,25 @@
                 <td>{{ser.descrpcion}}</td>
                 <td><img src="{{ ser.imgServicio.url}}" class="ref" alt=""></td>
                 <td>{{ser.TipoServicio}}</td>
+
                 <td>
+                    {% if perms.gastronomia.change_Servicio %}
                     <a href="{% url 'form_modi_serv' ser.idServicio %}"><img src="{% static 'servicios/img/boton-editar1.png' %}" alt=""></a>
+                    {% endif %}
                 </td>
+
                 <td>
+                    {% if perms.gastronomia.delete_Servicio %}
                     <a href="{% url 'eliminar_servicio' ser.idServicio %}" id="eliminar"><img src="{% static 'servicios/img/eliminar1.png' %}" alt=""></a>
+                    {% endif %}
                 </td>
             </tr>
             {% endfor %}
         </table>
     </div>
     <div class="enlace_agre">
-        <a href="{% url 'form_servicio' %}">Agregar Servicio</a>
+        {% if perms.gastronomia.add_Servicio %}
+        <a href="{% url 'form_servicio' %}">Agregar Servicio</a> {% endif %}
         <a href="{% url 'vista_cliente' %}">Volver</a>
     </div>
 

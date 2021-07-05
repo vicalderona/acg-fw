@@ -2,6 +2,8 @@ from django import forms
 from django import forms
 from django.forms import ModelForm
 from .models import Servicio,TipoServicio
+from django.contrib.auth.forms import UserCreationForm
+
 
 
 class TipoServicioForm (ModelForm):
@@ -14,4 +16,6 @@ class ServicioForm (ModelForm):
         model = Servicio
         fields = ['idServicio', 'nombreServicio', 'descrpcion','imgServicio', 'TipoServicio']
 
+class CustomUserCreationForm(UserCreationForm):
+    pass
 
